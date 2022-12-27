@@ -998,7 +998,7 @@ Retailers, Freelancers ... TransVie provides you with a tailor-made medical care
 				
 				<form class="contact-form mt-5">
 					<span v-if="error_api" style="margin-left: 26px !important; font-size: 13px; color: red" >
-						Email is not valid.
+						Full name required.
 					</span>
 
 					<input class="form-control wow fadeIn" v-model="input.full_name" data-wow-duration="0.5s" type="text" placeholder="Full name">
@@ -1287,7 +1287,12 @@ Retailers, Freelancers ... TransVie provides you with a tailor-made medical care
 							if (response.data.success) {
 								$.notify({
 									message: response.data.success,
-								},{Message
+								},{
+									placement: {
+										from: "top",
+										align: "right"
+									},
+									type: "success",
 									timer: 5000
 								});
 							}
@@ -1308,7 +1313,7 @@ Retailers, Freelancers ... TransVie provides you with a tailor-made medical care
 						.catch((error) => { 
 							console.log('error: ', error)
 							$.notify({
-								message: 'Problème de connection.',
+								message: 'Connection problem.',
 							},{
 								placement: {
 									from: "top",
@@ -1398,7 +1403,7 @@ Retailers, Freelancers ... TransVie provides you with a tailor-made medical care
 						.catch((error) => { 
 							console.log('error: ', error)
 							$.notify({
-								message: 'Connection problem.',
+								message: 'L\'email n\'est pas valide.',
 							},{
 								placement: {
 									from: "top",
