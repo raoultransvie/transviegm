@@ -1287,12 +1287,7 @@ Retailers, Freelancers ... TransVie provides you with a tailor-made medical care
 							if (response.data.success) {
 								$.notify({
 									message: response.data.success,
-								},{
-									placement: {
-										from: "top",
-										align: "right"
-									},
-									type: "success",
+								},{Message
 									timer: 5000
 								});
 							}
@@ -1403,7 +1398,7 @@ Retailers, Freelancers ... TransVie provides you with a tailor-made medical care
 						.catch((error) => { 
 							console.log('error: ', error)
 							$.notify({
-								message: 'L\'email n\'est pas valide.',
+								message: 'Connection problem.',
 							},{
 								placement: {
 									from: "top",
