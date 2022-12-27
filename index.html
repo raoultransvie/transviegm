@@ -1190,7 +1190,7 @@ Retailers, Freelancers ... TransVie provides you with a tailor-made medical care
 			// your functions go here
 			$('#email-field').click(function() {
 				$(this).addClass("active");
-				$(this).attr('placeholder','Votre Email ...');
+				$(this).attr('placeholder','Email ...');
 				$('#subscribe-button').addClass("show");
 			});
 
@@ -1401,9 +1401,9 @@ Retailers, Freelancers ... TransVie provides you with a tailor-made medical care
 							}
 						})
 						.catch((error) => { 
-							console.log('error: ', error)
+							//console.log('error: ', error)
 							$.notify({
-								message: 'L\'email n\'est pas valide.',
+								message: 'Email is not valid.',
 							},{
 								placement: {
 									from: "top",
