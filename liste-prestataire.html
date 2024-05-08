@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+
+	<title>Transvie | Liste</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.webp">
+
+	<link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="assets/css/animate.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"/>
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+
+<body class="home">
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+	<div class="container">
+		<div class="navbar-header">
+			<!-- Button for smallest screens -->
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			<a class="navbar-brand" href="index.html"><img src="assets/images/logo.webp" width="150" alt=""></a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav pull-right">
+				<li><a href="index.html">Accueil</a></li>
+				<li class="active"><a href="index.html?#offre">Nos offres</a></li>
+				<li><a href="index.html?#reseau">Notre réseau</a></li>
+				<li><a href="index.html?#quisommesnous">Qui sommes nous?</a></li>
+				<!--<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-play-circle-o"></i> <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="sidebar-left.html">Sous menu 1</a></li>
+						<li class="active"><a href="sidebar-right.html">Sous menu 2</a></li>
+					</ul>
+				</li>-->
+				<li><a href="index.html?#contact">Contact</a></li>
+				<li><a class="btn-nav" href="signin.html">Se connecter</a></li>
+			</ul>
+		</div><!--/.nav-collapse -->
+	</div>
+</div>
+<!-- /.navbar -->
+
+
+<!-- Header -->
+<header id="head2">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 wow slideInLeft">
+				<h1 class="lead">Nos Prestataires TransVie</h1>
+			</div>
+			<div class="col-md-6"></div>
+
+		</div>
+		<div class="image-overlay2 wow fadeIn">
+			<img class="image-two-overlay" src="assets/images/infirmier_vieux-min.webp"/>
+		</div>
+	</div>
+</header>
+<!-- /Header  94.23.34.54:8001/api/partnerlist -->
+
+<section id="sectionpartnerlist">
+	<div class="container">
+	<table id="example" class="display" style="width:100%">
+		<thead>
+		<tr>
+			<th>Nom</th>
+			<th>Emplacement</th>
+			<th>Type</th>
+			<th>Description</th>
+			<th>Téléphone</th>
+			<th>Adresse</th>
+			<th>Pays</th>
+			<th>Ville</th>
+			<th>Activer</th>
+		</tr>
+		</thead>
+		<tbody>
+		
+			<tr v-for="(item, index) in partnerlist" :key="index">
+				<td> {{item.name}} </td>
+				<td> {{item.location}} </td>
+				<td> {{item.type}} </td>
+				<td> {{item.description}} </td>
+				<td> {{item.phone}} </td>
+				<td> {{item.address}} </td>
+				<td> {{item.country}} </td>
+				<td> {{item.city}} </td>
+				<td> {{item.activate}} </td>
+			</tr>
+
+		</tbody>
+		<tfoot>
+		<tr>
+			<th>Nom</th>
+			<th>Emplacement</th>
+			<th>Type</th>
+			<th>Description</th>
+			<th>Téléphone</th>
+			<th>Adresse</th>
+			<th>Pays</th>
+			<th>Ville</th>
+			<th>Activer</th>
+		</tr>
+		</tfoot>
+	</table>
+	</div>
+</section>
+
+<footer id="footer" class="top-space">
+
+	<div class="footer1">
+		<div class="container top-space" style="padding-bottom: 30px">
+			<div class="row">
+
+				<div class="col-md-4 col-sm-4 widget">
+					<h3 class="widget-title">NOS FILIALES</h3>
+					<div class="widget-body">
+						<p><span style="color: #46dd82">TransVie Sénégal</span>
+							<br>Lot 2 numéro 440 Zone de
+							captage, Dakar, Sénégal<br>
+							Tél :+221 33 824 33 45</p>
+
+						<br>
+						<p><span style="color: #46dd82">TransVie Côte d’Ivoire</span><br>
+							Marcory Résidentiel , Lot 44,
+							Lot 11<br>
+							Tél : 00225 21 98 16 69</p>
+
+						<br>
+						<p><span style="color: #46dd82">TransVie Togo</span><br>
+							Boulevard du 13 janvier <br>(en face de la Lonato),
+							<br>Nyekonakpoe - Lomé<br>
+							Tél : +228 22 22 22 55</p>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-4 widget">
+					<h3 class="widget-title">LIENS IMPORTANTS</h3>
+					<div class="widget-body">
+						<a href="">Qui sommes nous ?</a><br><br>
+						<!-- <a href="">Le groupe Transvie</a><br><br>
+						<a href="">Trouver une agence</a><br><br> -->
+						<a href="https://transviediaspora.sn">Transvie Diaspora</a>
+						<a href="https://transvie.ci">Transvie Cote d'ivoire</a><br><br>
+						<a href="https://transvie.sn">Transvie Sénégal</a>
+
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-4 widget">
+					<div class="widget-body">
+						<p>
+							Abonnez-vous à notre
+							bulletin et recevez des
+							nouvelles de nos réductions
+						</p>
+
+						<div class="middle">
+
+							<input type="email" value="" name="EMAIL" class="email-field" id="email-field" placeholder="Newsletters">
+
+							<input type="submit" value="OK" name="subscribe" id="subscribe-button" class="btnx bout">
+
+						</div>
+
+						<br><br><br><br>
+						<p class="follow-me-icons">
+							<a href=""><i class="fa fa-twitter fa-2"></i></a>
+							<a href=""><i class="fa fa-dribbble fa-2"></i></a>
+							<a href=""><i class="fa fa-github fa-2"></i></a>
+							<a href=""><i class="fa fa-facebook fa-2"></i></a>
+						</p>
+					</div>
+				</div>
+
+			</div> <!-- /row of widgets -->
+		</div>
+	</div>
+
+	<div class="footer2">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-6 widget">
+				</div>
+
+				<div class="col-md-6 widget">
+					<div class="widget-body">
+						<p class="text-center">
+							Copyright &copy; 2020, Transvie Sénégal. Designé par <a href="http://moozistudio.com" rel="designer">Moozistudio</a>
+						</p>
+					</div>
+				</div>
+
+			</div> <!-- /row of widgets -->
+		</div>
+	</div>
+
+</footer>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/headroom.min.js"></script>
+<script src="assets/js/jQuery.headroom.min.js"></script>
+<script src="assets/js/template.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"></script>
+
+<script>
+	const news_letters = new Vue({
+            el: '#sectionpartnerlist',
+            data: {
+                partnerlist: []
+            },
+			methods: {
+				partnerAllList () {
+					axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*'
+					axios.defaults.headers.common['client'] = '$2y$10$jNEnQLLrG7.7BJSAnUDhwelxLbVi2/4GJrz3YPRA3Fu2RPLCHVUWW'
+					axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+
+					axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
+					
+					axios
+						.get('http://94.23.34.54:8001/api/partnerlist', this.input)
+						.then((response) => { 
+							// console.log('response: ', response);
+							this.partnerlist = response.data
+							
+						})
+						.catch((error) => { 
+							console.log('error: ', error)
+						});
+
+				}
+			},
+            mounted () {
+				this.partnerAllList();
+            }
+        })
+</script>
+
+<script>
+	new WOW().init();
+</script>
+<script>
+	$('ul.tabs li').click(function () {
+		var tab_id = $(this).attr('href');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#" + tab_id).addClass('current');
+	})
+</script>
+<script>
+	//open and close tab menu
+	$('.nav-tabs-dropdown')
+			.on("click", "li:not('.active') a", function(event) {  $(this).closest('ul').removeClass("open");
+			})
+			.on("click", "li.active a", function(event) {        $(this).closest('ul').toggleClass("open");
+			});
+</script>
+<script>
+	$(document).ready(function() {
+		$('#example').DataTable( {
+			"language": {
+				"url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
+			}
+		} );
+	} );
+</script>
+
+<script>
+	// remap jQuery to $
+	(function($){
+
+		/* trigger when page is ready */
+		$(document).ready(function (){
+
+			// your functions go here
+			$('#email-field').click(function() {
+				$(this).addClass("active");
+				$(this).attr('placeholder','Votre Email ...');
+				$('#subscribe-button').addClass("show");
+			});
+
+		});
+
+	})(window.jQuery);
+</script>
+
+<script>
+	$(document).ready(function(){
+		$('.customer-logos').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 1000,
+			arrows: false,
+			dots: false,
+			pauseOnHover: false,
+			responsive: [{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3
+				}
+			}, {
+				breakpoint: 520,
+				settings: {
+					slidesToShow: 2
+				}
+			}]
+		});
+	});
+</script>
+</body>
+</html>
